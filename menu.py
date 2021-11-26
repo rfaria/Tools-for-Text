@@ -1,8 +1,9 @@
 def choose_func():
     print("Please, choose the desidered function:")
-    print("0 - Count appearances of a character")
-    print("1 - Total number of characters")
+    print("0 - Count appearances of a character in a manually inputed text")
+    print("1 - Total number of characters in a manually inputed text")
+    print("quit - Finish the app")
 
-    choise = input()
+    choice = input()
 
-    return choise
+    return choice

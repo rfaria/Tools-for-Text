@@ -13,17 +13,30 @@ __license__ = "MIT"
 
 def main():
     """ Main entry point of the app """
-    choice = choose_func()
+    while(1):
+        choice = choose_func()
 
-    if choice == "0":
-        print("Selected: 0 - Count appearances of a character")
-        print("Insert text: ")
-        text = input()
-        print("Insert character to be counted: ")
-        charac = input()
-        num = count_char_appearances(text, charac)
+        if choice == "0":
+            print("Selected: Count appearances of a character in a manually inputed text")
+            print("Insert text: ")
+            text = input()
+            print("Insert character to be counted: ")
+            charac = input()
+            num = count_char_appearances_manual_text(text, charac)
 
-        print(f"The character {charac} appears {num} times in {text}")
+            print(f"The character \"{charac}\" appears {num} times in \"{text}\".\n\n")
+
+        elif choice == "1":
+            print("Selected: 1 - Total number of characters in a manually inputed text")
+            print("Insert text: ")
+            text = input()
+            size = length_of_text(text)
+
+            print(f"The text \"{text}\" has {size} characters.\n\n")
+
+        elif choice == "quit":
+            break
+
 
 
 if __name__ == "__main__":
