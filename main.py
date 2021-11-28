@@ -49,14 +49,26 @@ def main():
             print(f"The new text is: \"{new_text}\"\n\n")
         
         elif choice == "3":
-            print("Selected: 3 - Extract text sentiment")
+            print("Selected: 3 - Extract global text sentiment")
             print("Insert text: ")
             text = input()
-            test(text)
+            result = global_sentiment(text)
             
+            print(f"\nThe global text sentiment is: \"{result}\"\n\n")
 
+        elif choice == "4":
+            print("Selected: 4 - Extract sentiment of each word")
+            print("Insert text: ")
+            text = input()
+            result = sentiment_word_list(text)
+
+            neg = result["negative"]
+            neu = result["neutral"]
+            pos = result["positive"]
             
-            # print(f"The new text is: \"{new_text}\"\n\n")
+            print(f"\nThe negative words are: \"{neg}\"\n")
+            print(f"The neutral words are: \"{neu}\"\n")
+            print(f"The positive words are: \"{pos}\"\n")
 
         elif choice == "quit":
             break
