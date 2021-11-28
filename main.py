@@ -6,6 +6,7 @@ Tools for Text main.py
 from count import *
 from edit import *
 from menu import *
+from sentiment import *
 
 __author__ = "Rodrigo Candido Faria"
 __version__ = "0.1.0"
@@ -46,6 +47,16 @@ def main():
             new_text = swap_words(text, old_word, new_word)
 
             print(f"The new text is: \"{new_text}\"\n\n")
+        
+        elif choice == "3":
+            print("Selected: 3 - Extract text sentiment")
+            print("Insert text: ")
+            text = input()
+            test(text)
+            
+
+            
+            # print(f"The new text is: \"{new_text}\"\n\n")
 
         elif choice == "quit":
             break
