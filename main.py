@@ -5,12 +5,22 @@ Tools for Text main.py
 
 # conda list --export > requirements.txt
 # conda env export > environment.yml
+# conda env export > app.yaml
 
 from count import *
 from edit import *
 from menu import *
 from sentiment import *
 from lang_detect import *
+# from flask import Flask
+
+# from flask import Flask
+
+# app = Flask(__name__)
+
+# @app.route("/")
+# def index():
+#     return "Congratulations, it's a web app!"
 
 __author__ = "Rodrigo Candido Faria"
 __version__ = "0.1.0"
