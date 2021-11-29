@@ -5,6 +5,7 @@ def choose_func():
     print("2 - Swap words in a text")
     print("3 - Extract global text sentiment")
     print("4 - Extract sentiment of each word")
+    print("5 - Detect a text language")
     print("quit - Finish the app")
 
     choice = input()

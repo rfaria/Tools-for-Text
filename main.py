@@ -3,10 +3,14 @@
 Tools for Text main.py
 """
 
+# conda list --export > requirements.txt
+# conda env export > environment.yml
+
 from count import *
 from edit import *
 from menu import *
 from sentiment import *
+from lang_detect import *
 
 __author__ = "Rodrigo Candido Faria"
 __version__ = "0.1.0"
@@ -69,10 +73,18 @@ def main():
             print(f"\nThe negative words are: \"{neg}\"\n")
             print(f"The neutral words are: \"{neu}\"\n")
             print(f"The positive words are: \"{pos}\"\n")
+        
+        elif choice == "5":
+            print("Selected: 5 - Detect a text language")
+            print("Insert text: ")
+            text = input()
+            result = detect_language(text)
+
+            print(f"\nLanguage detected: \"{result[0]}\"")
+            print(f"Probability: {result[1]}\n")
 
         elif choice == "quit":
             break
-
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """
