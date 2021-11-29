@@ -1,7 +1,7 @@
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-nltk.download('punkt')
-nltk.download('vader_lexicon')
+nltk.download('punkt', quiet=True)
+nltk.download('vader_lexicon', quiet=True)
 
 def global_sentiment(sentence, optimism_rate=0.75):
 
