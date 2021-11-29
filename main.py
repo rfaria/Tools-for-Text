@@ -77,8 +77,13 @@ def main():
             print("Insert text: ")
             text = input()
             result = global_sentiment(text)
-            
-            print(f"\n{bcolors.OKGREEN}The global text sentiment is: \"{result}\"\n{bcolors.ENDC}")
+
+            if result == "Negative":         
+                print(f"\n{bcolors.FAIL}The global text sentiment is: \"{result}\"\n{bcolors.ENDC}")
+            elif result == "Neutral":
+                print(f"\n{bcolors.WARNING}The global text sentiment is: \"{result}\"\n{bcolors.ENDC}")
+            else:
+                print(f"\n{bcolors.OKGREEN}The global text sentiment is: \"{result}\"\n{bcolors.ENDC}")
 
         elif choice == "4":
             print(f"{bcolors.OKBLUE}Selected: 4 - Extract sentiment of each word{bcolors.ENDC}")
